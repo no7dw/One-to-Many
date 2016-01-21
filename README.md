@@ -76,7 +76,7 @@ One-to-Many sails project, demo ORM join effect with the help o waterline as ORM
     
     
     
-    sails>      User.find({phone:'18680493001'}).populate('orders').exec(function(err,r){console.log(r[0].toJSON())});
+    sails>      User.find({phone:'18680493002'}).populate('orders').exec(function(err,r){console.log(r[0].toJSON())});
     undefined
     sails> { orders: 
        [ { uid: '56a08fe5d8aadd27a6f8650c',
@@ -113,7 +113,7 @@ One-to-Many sails project, demo ORM join effect with the help o waterline as ORM
            payFailureDes: 'true',
            owner: '54cef05579337f164b365050',
            id: '56a095aa2557b3daa61ab82f' } ],
-      phone: '18680493001',
+      phone: '18680493002',
       is_verify: true,
       createdAt: '2015-02-02T03:34:45.924Z',
       updatedAt: '2015-07-17T10:29:34.274Z',
@@ -125,3 +125,10 @@ One-to-Many sails project, demo ORM join effect with the help o waterline as ORM
       id: '54cef05579337f164b365050' }
 
 
+result like: above , can print out, but if you need to copy log to convert json to csv, need to solve the problem:
+    
+    products: [Object],// can NOT pass these to csv, not a valid json, it was another json inside
+    product: [Object], //
+
+
+so try to to /user/fp controller instead , --- which use res.json.
