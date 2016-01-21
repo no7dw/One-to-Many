@@ -1,7 +1,6 @@
 # One-to-Many
 
 a [Sails](http://sailsjs.org) application
-# One-to-Many
 One-to-Many sails project, demo ORM join effect with the help o waterline as ORM . With this , you don't need to manual join.
   
     dengwei@dengweis-MacBook-Pro:~/project/github/One-to-Many$ sails console
