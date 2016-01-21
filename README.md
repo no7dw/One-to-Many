@@ -76,7 +76,7 @@ One-to-Many sails project, demo ORM join effect with the help o waterline as ORM
     
     
     
-    User.find({phone:'18680493001'}).populate('orders').exec(function(err,r){console.log(r[0].toJSON())});
+    sails>      User.find({phone:'18680493001'}).populate('orders').exec(function(err,r){console.log(r[0].toJSON())});
     undefined
     sails> { orders: 
        [ { uid: '56a08fe5d8aadd27a6f8650c',
